@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    text-decoration: none
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.main_school {
+    background-color: #53917e;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; 
+}
+
+.school {
+    display: flex;
+    align-items: center;
+}
+
+.school img {
+    height: 80px;
+    width: 80px;
+    margin-right: 20px; 
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    padding-left: 3rem;
+}
+
+ul li {
+    margin-right: 20px;
+}
+
+ul li:last-child {
+    margin-right: 0; 
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.user {
+    height: 40px;
+    background-color: #EB9C5C;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+.user p{
+    font-size: 14px;
+    letter-spacing: 2px;
+    
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+.about{
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 10px;
+    height: 100vh;
+    width: auto;
+    margin: 50px;
+    background-color: #3b3c36;
+}
+
+.about .message {
+    flex: 1;
+    width: 50%;
+    margin: 20px 40px 0;
+}
+.about .message h1{
+    margin-top: 15px ;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 40px;
+    
+}
+.about .message p{
+    width: 100%;
+    font-size: 17px;
+    line-height: 25px;
+    text-align: justify;
+    color: #fff;
+}
+.about .org {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.about .org img {
+    width: 450px;
+    height: auto;
+    position: relative;
+}
+/* HOTLINES */
+.title{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #3b3c36;
+    letter-spacing: 2px;
+}
+.contact-container{
+    margin:  0 50px 50px 50px;
+    display: flex;
+    justify-content: center;
+}
+.contact-table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+.contact-table th,
+.contact-table td {
+    padding: 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.contact-table th {
+    background-color: #3b3c36; 
+    text-align: left;
+    color: #fff;
+}
+.contact-table td {
+    background-color: #eee; 
+    text-align: left;
+    padding-left: 40px;
+    position: relative;
+}
+.contact-table td a{
+    color: #3b3c36;
+}
+.phone-icon {
+    position: absolute;
+    left: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* announcement */
+.Announcement{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #3b3c36;
+    border-radius: 10px ;
+    height: 100vh;
+    width: auto;
+    margin: 50px;
+    gap: 50px;
+    background-color: rgba(235, 156, 92, 0.8);
+}
+.left{
+    margin: auto;
+}
+.right {
+    align-items: center;
+    margin: 50px 0;
+    
+}
+.right h1{
+    margin-bottom: 20px;
+    color: #3b3c36;
+}
+.right .date{
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #3b3c36;
+}
+.right .message{
+    text-align: justify;
+    width: 90%;
+    color: #3b3c36;
+    font-size: 18px;
+}
+
+.updates{
+    
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    align-items: center;
+}
+.boxes{
+    width: 250px;
+    height: 250px;
+    background-color: #7DBBB6;
+    margin: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.boxes img{
+    width: 230px;
+    height: auto;
+}
+.boxes {
+    position: relative; 
+    width: 250px;
+    height: 250px;
+    background-color: #7DBBB6;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.overlay {
+    position: absolute; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.boxes:hover .overlay {
+    opacity: 1; 
+}
+
+.content {
+    text-align: center;
+    color: white;
+}
+/* footer */
+
+
+
+
+  
