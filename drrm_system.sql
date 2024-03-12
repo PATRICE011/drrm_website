@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 12, 2024 at 12:14 PM
+-- Generation Time: Mar 12, 2024 at 12:49 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `drrm_system`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_login`
+--
+
+CREATE TABLE `admin_login` (
+  `admin_id` int(11) NOT NULL,
+  `admin_username` varchar(100) NOT NULL,
+  `admin_password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin_login`
+--
+
+INSERT INTO `admin_login` (`admin_id`, `admin_username`, `admin_password`) VALUES
+(1, 'admin', '12345');
 
 -- --------------------------------------------------------
 
@@ -44,9 +63,34 @@ INSERT INTO `announcement` (`id`, `date`, `message`) VALUES
 (4, '2024-03-06', ' \r\nTitle: The Philippines: A Tapestry of Culture, History, and Natural Beauty\r\n\r\nIntroduction:\r\nNestled in the heart of Southeast Asia lies a gem of diverse cultures, rich history, and unparalleled natural beauty – the Philippines. With over 7,000 islands comprising its archipelago, the Philippines boasts a unique blend of traditions, landscapes, and stories that have shaped its identity over centuries. From its vibrant festivals to its pristine beaches, the Philippines offers a tapestry of experiences that captivate the imagination and leave an indelible mark on all who visit.\r\n\r\nCultural Mosaic:\r\nThe Philippines is a melting pot of cultures, shaped by waves of migration and colonization throughout its history. Indigenous peoples such as the Igorots, Lumads, and Mangyans have preserved their traditions amidst modernity, while Malay, Chinese, Spanish, and American influences have left their mark on Filipino society. This cultural diversity is celebrated through festivals, dances, cuisine, and languages spoken across the archipelago, showcasing the resilience and adaptability of the Filipino spirit.'),
 (5, '2024-03-08', ' Challenges and Opportunities:\r\nDespite its natural and cultural riches, the Philippines faces various challenges, including poverty, corruption, and environmental degradation. Rapid urbanization and industrialization threaten fragile ecosystems, while socioeconomic disparities persist among its diverse population. However, the Philippines also holds immense potential for sustainable development, with a growing tourism industry, a young and dynamic workforce, and a vibrant civil society driving positive change.\r\n\r\nConclusion:\r\nIn conclusion, the Philippines is a country of contrasts – a blend of ancient traditions and modern aspirations, colonial legacies and indigenous resilience, natural wonders and man-made challenges. Its beauty lies not only in its landscapes but also in the warmth and resilience of its people, who continue to forge ahead with hope and determination. As the Philippines navigates the complexities of the 21st century, it remains a beacon of diversity, resilience, and possibility in the heart of Southeast Asia.');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `event`
+--
+
+CREATE TABLE `event` (
+  `event_id` int(11) NOT NULL,
+  `event_image` varchar(255) NOT NULL,
+  `event_message` mediumtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `event`
+--
+
+INSERT INTO `event` (`event_id`, `event_image`, `event_message`) VALUES
+(5, 'drill.jpg ', ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, voluptas natus vel laboriosam ipsam adipisci, nostrum officiis ea neque corporis quo ullam voluptates in et non porro quae iure! Nihil ab, dolore sequi officia ea est itaque aspernatur. Tenetur neque aperiam fugiat asperiores accusamus unde doloremque laboriosam molestiae dolor? In.');
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin_login`
+--
+ALTER TABLE `admin_login`
+  ADD PRIMARY KEY (`admin_id`);
 
 --
 -- Indexes for table `announcement`
@@ -55,14 +99,32 @@ ALTER TABLE `announcement`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `event`
+--
+ALTER TABLE `event`
+  ADD PRIMARY KEY (`event_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `admin_login`
+--
+ALTER TABLE `admin_login`
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `announcement`
 --
 ALTER TABLE `announcement`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `event`
+--
+ALTER TABLE `event`
+  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
